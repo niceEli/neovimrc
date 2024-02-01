@@ -1,5 +1,5 @@
 function ColorMyPencils(color)
-	color = color or "tokyonight"
+	color = color or "ayu"
 	vim.cmd.colorscheme(color)
 
 	-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -44,5 +44,12 @@ return {
         end
     },
 
+    {
+        "Shatur/neovim-ayu",
+        config = function()
+            vim.cmd("colorscheme ayu")
 
+            ColorMyPencils()
+        end
+    },
 }
